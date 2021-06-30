@@ -160,6 +160,8 @@ export default {
       }
     },
     async handleSearch() {
+
+      
       const queryParams = this.convertQueryParams();
       await this.searchPageData(Object.assign(this.query, queryParams));
     },
