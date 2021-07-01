@@ -96,7 +96,7 @@
       :total="total"
     >
     </el-pagination>
-    <router-view />
+       <router-view />
   </div>
 </template>
 <script>
