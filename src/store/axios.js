@@ -12,7 +12,7 @@ instance.interceptors.request.use(
   (config) => {
     // 让每个请求携带token
     if (localStorage.getItem("TOKEN")) {
-      config.headers["XN-Auth"] = localStorage.getItem("TOKEN");
+      config.headers["Authorization"] = localStorage.getItem("TOKEN");
     }
     // get请求参数key含有[]，需要转义
     let url = config.url;

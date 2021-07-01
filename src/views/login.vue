@@ -183,11 +183,13 @@ export default {
         localStorage.setItem("TOKEN", res.data.token);
       }
       const result = await this._getLoginUserInfo();
-       if (this.httpSuccess(result)) {
-        localStorage.setItem("TOKEN", result.data.token);
+      if (this.httpSuccess(result)) {
+        this.SET_LOGIN_USER_INFO(result.data);
+        /** todo 用户角色--> 角色菜单去重 */
+        // result.data.isAdmin  -->是管理员 -->获取系统所有菜单
+        // !result.data.isAdmin -->普通用户 -->result.data?.user.sysUserRole -->根据角色查询所有授权菜单并去重
+        this.$router.push("/"); // 跳转到首页
       }
-      this.SET_LOGIN_USER_INFO(result.data);
-      this.$router.push("/"); // 跳转到首页
     },
     handleClearForm() {
       this.formData = {};

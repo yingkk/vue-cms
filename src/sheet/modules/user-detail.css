@@ -6,9 +6,10 @@
   top: 0;
   left: 0;
   box-sizing: border-box;
-  form {
-    width: 600px;
-    height: 100%;
-    margin: 0 auto;
-  }
+}
+
+.user-detail form {
+  width: 600px;
+  height: 100%;
+  margin: 0 auto;
 }

@@ -1,0 +1,23 @@
+.el-pagination {
+  height: 48px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: none;
+}
+
+.el-table {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.el-breadcrumb {
+  height: 30px;
+  line-height: 30px;
+}
+
+.el-select {
+  width: 100%;
+}
